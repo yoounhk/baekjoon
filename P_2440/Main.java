@@ -1,5 +1,3 @@
-package P_2440;
-
 import java.util.Scanner;
 
 public class Main {

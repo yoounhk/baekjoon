@@ -1,5 +1,3 @@
-package P_2442;
-
 import java.util.Scanner;
 
 public class Main {
@@ -7,9 +5,9 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i <= n; i++) { // i = 1
       printWhiteSpace(n - i);
-      print2nMinus1Star(i);
+      printOddNumberStar(i);
       System.out.println();
     }
     scanner.close();
@@ -21,10 +19,10 @@ public class Main {
     }
   }
 
-  private static void print2nMinus1Star(int n) {
-    for (int i = 0; i < n * 2 - 1; i++) {
+  private static void printOddNumberStar(int n) {
+    for (int i = 0; i < 2 * n - 1; i++) {
       System.out.print("*");
     }
-
   }
+
 }
