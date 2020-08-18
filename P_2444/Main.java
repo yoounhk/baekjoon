@@ -1,15 +1,17 @@
-package P_2442;
-
 import java.util.Scanner;
 
 public class Main {
   public static void main(String args[]) {
     Scanner scanner = new Scanner(System.in);
-    int n = scanner.nextInt();
-
-    for (int i = 1; i <= n; i++) { // i = 1
-      printWhiteSpace(n - i);
+    int degree = scanner.nextInt();
+    for (int i = 1; i <= degree; i++) { // i == 1
+      printWhiteSpace(degree - i);
       printOddNumberStar(i);
+      System.out.println();
+    }
+    for (int i = 1; i < degree; i++) { // i == 1
+      printWhiteSpace(i);
+      printOddNumberStar(degree - i);
       System.out.println();
     }
     scanner.close();

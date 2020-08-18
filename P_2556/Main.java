@@ -1,4 +1,4 @@
-package P_2440;
+package P_2556;
 
 import java.util.Scanner;
 
@@ -7,15 +7,11 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     for (int i = 0; i < n; i++) {
-      printStar(n - i);
+      for (int j = 0; j < n; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
     }
     scanner.close();
-  }
-
-  public static void printStar(int n) {
-    for (int i = 0; i < n; i++) {
-      System.out.print("*");
-    }
-    System.out.println();
   }
 }
