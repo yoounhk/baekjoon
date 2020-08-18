@@ -1,4 +1,4 @@
-package P_10992;
+package not_refactored.P_10992;
 
 import java.util.Scanner;
 

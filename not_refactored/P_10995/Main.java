@@ -1,4 +1,4 @@
-package not_refactored.P_10991;
+package P_10995;
 
 import java.util.Scanner;
 
@@ -11,24 +11,25 @@ public class Main {
       scanner.close();
       return;
     }
-    for (int i = 1; i <= n; i++) { // i == 1
-      printFirstBlank(n - i);
-      printUnit(i);
+    for (int i = 1; i <= n; i++) {
+      if (isEvenLine(i)) {
+        System.out.print(" ");
+      }
+      printPattern(n);
       System.out.println();
     }
     scanner.close();
   }
 
-  private static void printFirstBlank(int n) {
-    for (int i = 0; i < n; i++) {
-      System.out.print(" ");
-    }
+  private static boolean isEvenLine(int n) {
+    if (n % 2 == 0)
+      return true;
+    return false;
   }
 
-  private static void printUnit(int n) {
+  private static void printPattern(int n) {
     for (int i = 0; i < n; i++) {
       System.out.print("* ");
     }
   }
-
 }
