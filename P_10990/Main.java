@@ -7,10 +7,10 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     for (int i = 0; i < n; i++) {
-      printBlank(n - i);
+      printBlank(n - i - 1);
       System.out.print("*");
       printBlank(2 * i - 1);
-      if (i != 0)
+      if (i > 0)
         System.out.print("*");
       System.out.println();
     }

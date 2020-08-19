@@ -7,7 +7,7 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     for (int i = 0; i < n; i++) {
-      printBlank(n - i);
+      printBlank(n - i - 1);
       printStringNTime("* ", i + 1);
       System.out.println();
     }
