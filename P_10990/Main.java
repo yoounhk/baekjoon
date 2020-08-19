@@ -7,26 +7,18 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int n = scanner.nextInt();
     for (int i = 0; i < n; i++) {
-      printFirstBlank(n - i - 1);
+      printBlank(n - i);
       System.out.print("*");
-      printMiddleBlank(i);
-      if (i == 0) {
-        System.out.println();
-        continue;
-      }
-      System.out.println("*");
+      printBlank(2 * i - 1);
+      if (i != 0)
+        System.out.print("*");
+      System.out.println();
     }
     scanner.close();
   }
 
-  private static void printFirstBlank(int n) {
+  public static void printBlank(int n) {
     for (int i = 0; i < n; i++) {
-      System.out.print(" ");
-    }
-  }
-
-  private static void printMiddleBlank(int n) {
-    for (int i = 1; i <= n * 2 - 1; i++) {
       System.out.print(" ");
     }
   }
