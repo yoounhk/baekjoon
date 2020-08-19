@@ -1,4 +1,4 @@
-package P_10990;
+package P_10991;
 
 import java.util.Scanner;
 
@@ -8,10 +8,7 @@ public class Main {
     int n = scanner.nextInt();
     for (int i = 0; i < n; i++) {
       printBlank(n - i);
-      System.out.print("*");
-      printBlank(2 * i - 1);
-      if (i != 0)
-        System.out.print("*");
+      printStringNTime("* ", i + 1);
       System.out.println();
     }
     scanner.close();
@@ -22,4 +19,11 @@ public class Main {
       System.out.print(" ");
     }
   }
+
+  private static void printStringNTime(String str, int time) {
+    for (int i = 0; i < time; i++) {
+      System.out.print(str);
+    }
+  }
+
 }
