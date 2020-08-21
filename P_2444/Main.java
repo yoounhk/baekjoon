@@ -1,3 +1,5 @@
+package P_2444;
+
 import java.util.Scanner;
 
 public class Main {
