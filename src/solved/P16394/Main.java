@@ -1,4 +1,4 @@
-package in_progress.P16394;
+package P16394;
 
 import java.util.Scanner;
 
