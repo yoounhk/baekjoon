@@ -1,4 +1,4 @@
-package in_progress.P18108;
+package P18108;
 
 import java.util.Scanner;
 
