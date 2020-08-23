@@ -1,4 +1,4 @@
-package in_progress.P16430;
+package P16430;
 
 import java.util.Scanner;
 
