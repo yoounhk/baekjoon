@@ -1,7 +1,8 @@
 @echo off
 SetLocal EnableDelayedExpansion
 set ClassName=%1%
-    echo package src; > src\%ClassName%.java
+	echo // https://github.com/yoounhk/baekjoon > src\%ClassName%.java
+    echo package src; >> src\%ClassName%.java
     echo import java.util.Scanner; >> src\%ClassName%.java
     echo public class %ClassName% { >> src\%ClassName%.java
     echo private static Scanner scanner = new Scanner(System.in); >> src\%ClassName%.java
