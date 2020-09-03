@@ -19,18 +19,16 @@ public class Dice_2480 {
 				reward = 10000 + (i * 1000);
 			} else if (dice[i] == 2) {
 				reward = 1000 + (i * 100);
-			} else if (dice[i] != 0) {
-				max = max(i, max);
+			} else if (dice[i] != 0 && max < i) {
+				max = i;
+				reward = max(reward, max * 100);
 			}
-		}
-		if (reward == 0) {
-			reward = max * 100;
 		}
 		System.out.println(reward);
 		scanner.close();
 	}
 
-	private static int max(int i, int j) {
-		return i > j ? i : j;
+	private static int max(int a, int b) {
+		return a > b ? a : b;
 	}
 }
