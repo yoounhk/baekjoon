@@ -1,5 +1,5 @@
 // https://github.com/yoounhk/baekjoon
-package refactoring_needed;
+package src;
 
 import java.util.Scanner;
 
