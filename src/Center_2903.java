@@ -13,3 +13,4 @@ public class Center_2903 {
         }
         System.out.println(size * size);
     }
+}
