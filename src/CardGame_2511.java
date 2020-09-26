@@ -4,33 +4,44 @@ package src;
 import java.util.Scanner;
 
 public class CardGame_2511 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int round = 10;
+
+        int[] a = new int[10];
+        int[] b = new int[10];
+        for (int i = 0; i < 10; i++) {
+            a[i] = sc.nextInt();
+        }
+        for (int i = 0; i < 10; i++) {
+            b[i] = sc.nextInt();
+        }
+        
+        char[] winner = new char[10];
         int aScore = 0;
         int bScore = 0;
-		String[] a = sc.nextLine().split(" ");
-		String[] b = sc.nextLine().split(" ");
-        for (int i = 0; i < round; i++) {
-            if (Integer.parseInt(a[i]) > Integer.parseInt(b[i])) aScore += 3;
-            else if (Integer.parseInt(a[i]) < Integer.parseInt(b[i])) bScore += 3;
-            else {
+        for (int i = 0; i < 10; i++) {
+            if (a[i] > b[i]) {
+                aScore += 3;
+                winner[i] = 'A';
+            } else if (b[i] > a[i]) {
+                bScore += 3;
+                winner[i] = 'B';
+            } else {
                 aScore++;
                 bScore++;
+                winner[i] = 'D';
             }
         }
         System.out.println(aScore + " " + bScore);
-        char winner = 'D';
-        if (aScore > bScore) winner = 'A';
-        else if (aScore < bScore) winner = 'B';
+        if (aScore != bScore) System.out.println(aScore > bScore ? 'A' : 'B');
         else {
-            for (int i = round - 1; i >= 0; i--) {
-                if (!a[i].equals(b[i])) {
-                    winner = Integer.parseInt(a[i]) > Integer.parseInt(b[i]) ? 'A' : 'B';
-                    break;
+            for (int i = 0; i < 10; i++) {
+                if (winner[10 - i - 1] != 'D') {
+                    System.out.println(winner[10 - i - 1]);
+                    return;
                 }
             }
+            System.out.println('D');
         }
-        System.out.println(winner);
     }
 }
