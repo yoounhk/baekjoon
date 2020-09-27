@@ -11,11 +11,9 @@ public class Star_2447 {
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             int k = (int) (log(i) / log(3));
-            double ThreeOfK = pow(3, k);
+            double ThreeOfK = pow(3, k); // 3의 k승
             for (int j = 0; j < n; j++) {
-                if ((i % 3 == 1 && j % 3 == 1)
-                        || ((i / ThreeOfK >= 1.0 && i / ThreeOfK < 2) && (i / 3 % (int) ThreeOfK == 1))
-                        || (j / ThreeOfK >= 1.0 && j / ThreeOfK < 2) && (j / 3 % (int) ThreeOfK == 1))
+                if (true) // TODO: 여기만 수정하면 됨
                     System.out.print(" ");
                 else System.out.print("*");
             }
